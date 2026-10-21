@@ -1,0 +1,188 @@
+/* Scope the host popup chrome to this extension only, including light ST themes. */
+dialog.apocalypse-au-dialog {
+    background: #1c1b20 !important;
+    color: #f0e9e5 !important;
+    border: 1px solid rgba(220,185,183,.2) !important;
+    border-radius: 18px;
+    padding: 0;
+    width: 620px;
+    max-width: calc(100vw - 24px);
+    box-shadow: 0 18px 70px #0008;
+}
+dialog.apocalypse-au-dialog .popup-body { padding: 0; }
+dialog.apocalypse-au-dialog .popup-content { margin: 0; padding: 0; }
+dialog.apocalypse-au-dialog .popup-controls {
+    margin: 0;
+    padding: 12px 24px 18px;
+    background: #1c1b20;
+    border-top: 1px solid rgba(220,185,183,.16);
+}
+dialog.apocalypse-au-dialog .popup-button-ok {
+    background: #503334 !important;
+    color: #ffe4d9 !important;
+    border: 1px solid #aa746d !important;
+    border-radius: 10px;
+    min-height: 44px;
+    min-width: 112px;
+    padding: 8px 24px;
+    box-shadow: none;
+    text-shadow: none;
+}
+dialog.apocalypse-au-dialog .popup-button-ok:hover { background: #65403e !important; }
+dialog.apocalypse-au-dialog .popup-button-ok:focus-visible { outline: 2px solid #dfa29a; outline-offset: 3px; }
+dialog.apocalypse-au-dialog.au-compact-dialog {
+    width: 380px;
+    min-height: 0 !important;
+    height: fit-content !important;
+    margin: auto;
+}
+dialog.apocalypse-au-dialog.au-compact-dialog .popup-body { min-height: 0; height: auto; }
+dialog.apocalypse-au-dialog.au-compact-dialog .popup-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 130px;
+    padding: 24px;
+    margin: 0;
+}
+dialog.apocalypse-au-dialog .au-confirm-content { text-align: center; line-height: 1.7; word-break: keep-all; }
+dialog.apocalypse-au-dialog .au-confirm-content h3 { margin: 0 0 10px; font-size: 17px; color: #f5e9e4; }
+dialog.apocalypse-au-dialog .au-confirm-content p { margin: 0; color: #d0bec0; font-size: 13px; }
+/* Host popup-controls uses align-self:center. Stretch the row before sizing its children. */
+dialog.apocalypse-au-dialog.au-compact-dialog .popup-controls { display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; align-self: stretch !important; align-items: stretch; width: 100% !important; box-sizing: border-box; justify-content: center; gap: 10px; padding: 16px 24px; }
+dialog.apocalypse-au-dialog.au-compact-dialog .popup-controls .menu_button,
+dialog.apocalypse-au-dialog.au-compact-dialog .popup-controls button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0 !important;
+    box-sizing: border-box;
+    width: auto !important;
+    min-width: 88px !important;
+    min-height: 44px;
+    padding: 8px 12px !important;
+    margin: 0 !important;
+    font-size: 13px;
+    line-height: 1.5;
+    white-space: nowrap !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    writing-mode: horizontal-tb !important;
+    border: 1px solid #aa746d !important;
+    border-radius: 10px;
+    background: #503334 !important;
+    color: #ffe4d9 !important;
+    box-shadow: none;
+    text-shadow: none;
+}
+dialog.apocalypse-au-dialog.au-compact-dialog .popup-controls .popup-button-cancel { background: #2b272e !important; border-color: #6b565f !important; color: #ded0d3 !important; }
+dialog.apocalypse-au-dialog #apocalypse-au { border: 0; border-radius: 0; background-color: transparent; }
+#apocalypse-au {
+    --au-accent: #cf8580;
+    --au-muted: #b5a9aa;
+    --au-line: rgba(220,185,183,.16);
+    color: #f0e9e5;
+    background: radial-gradient(ellipse at 0 0, rgba(129,62,61,.19), transparent 60%), #1c1b20;
+    border: 1px solid var(--au-line);
+    border-radius: 18px;
+    padding: 24px;
+    width: 100%;
+    max-width: 620px;
+    margin: auto;
+    text-align: left;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.6;
+    text-shadow: none;
+}
+#apocalypse-au * { box-sizing: border-box; }
+#apocalypse-au [hidden] { display: none !important; }
+#apocalypse-au h2, #apocalypse-au h3, #apocalypse-au p { margin: 0; }
+#apocalypse-au h2 { color: #f5e9e4; font-size: 24px; font-weight: 750; letter-spacing: -.6px; }
+#apocalypse-au h3 { font-size: 14px; font-weight: 650; color: #eee4df; }
+#apocalypse-au .au-header { display: flex; align-items: center; gap: 12px; padding-bottom: 23px; border-bottom: 1px solid var(--au-line); }
+#apocalypse-au .au-header p { color: var(--au-muted); font-size: 12px; margin-top: 2px; }
+#apocalypse-au .au-emblem { display: grid; place-items: center; flex-shrink: 0; width: 48px; height: 48px; border: 1px solid #865553; background: #3c292d; border-radius: 14px; color: #dfa29a; font-size: 32px; }
+#apocalypse-au .au-edition { margin-left: auto; color: var(--au-muted); font-size: 11px; border: 1px solid var(--au-line); border-radius: 20px; padding: 3px 9px; white-space: nowrap; }
+#apocalypse-au .au-power-row, #apocalypse-au .au-post-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; }
+#apocalypse-au .au-power-row p, #apocalypse-au .au-post-row p { color: var(--au-muted); font-size: 12px; margin-top: 4px; word-break: keep-all; }
+#apocalypse-au .au-switch { display: flex; align-items: center; gap: 8px; background: transparent; color: var(--au-muted); border: 0; padding: 4px 0 4px 4px; min-height: 44px; flex-shrink: 0; cursor: pointer; font-size: 10px; font-weight: 700; letter-spacing: .5px; }
+#apocalypse-au .au-switch-track { display: block; position: relative; width: 48px; height: 28px; border-radius: 20px; background: #464049; border: 1px solid #69616b; transition: background .16s; }
+#apocalypse-au .au-switch-track::after { content: ''; position: absolute; top: 3px; left: 3px; height: 20px; width: 20px; border-radius: 50%; background: #d8cfd1; transition: transform .16s; }
+#apocalypse-au .au-switch[aria-checked="true"] { color: #e7a29b; }
+#apocalypse-au .au-switch[aria-checked="true"] .au-switch-track { background: #97564f; border-color: #ce8f83; }
+#apocalypse-au .au-switch[aria-checked="true"] .au-switch-track::after { transform: translateX(20px); background: #fff1e8; }
+#apocalypse-au fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+#apocalypse-au fieldset:disabled { opacity: .5; }
+#apocalypse-au .au-sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+#apocalypse-au .au-section { padding: 18px 0; border-top: 1px solid var(--au-line); }
+#apocalypse-au .au-section-heading { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 12px; }
+#apocalypse-au .au-section-heading > span { font-size: 11px; color: var(--au-muted); }
+#apocalypse-au .au-categories { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+#apocalypse-au .au-choice { min-height: 44px; padding: 9px 14px; border: 1px solid var(--au-line); border-radius: 10px; color: #d5c8c7; background: #28252d; font: inherit; cursor: pointer; margin: 0; transition: background .16s, border-color .16s; }
+#apocalypse-au .au-choice:hover { background: #382d34; border-color: #97645f; }
+#apocalypse-au .au-choice[aria-pressed="true"] { color: #ffe4d9; background: #503334; border-color: #c4867b; box-shadow: inset 0 -2px #c4867b; }
+#apocalypse-au button:focus-visible, #apocalypse-au summary:focus-visible { outline: 2px solid #dfa29a; outline-offset: 3px; }
+#apocalypse-au .au-subtypes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; padding: 12px; border-radius: 12px; border: 1px solid var(--au-line); background: #18171c; }
+#apocalypse-au .au-hint, #apocalypse-au .au-empty { font-size: 12px; color: var(--au-muted); padding: 16px 0 3px; }
+#apocalypse-au .au-empty { border: 1px dashed var(--au-line); border-radius: 12px; text-align: center; padding: 18px 10px; }
+#apocalypse-au .au-selected { display: flex; flex-wrap: wrap; gap: 7px; margin: 0; padding: 0; list-style: none; }
+#apocalypse-au .au-selected li { display: flex; align-items: center; gap: 6px; padding-left: 12px; background: #36282c; border: 1px solid #684344; border-radius: 10px; font-size: 12px; }
+#apocalypse-au .au-selected .au-choice { background: transparent; border: 0; box-shadow: none; padding: 4px 10px; font-size: 20px; min-width: 40px; }
+#apocalypse-au .au-selected .au-edit-button { font-size: 11px; padding: 5px 8px; color: #deb0a5; border-left: 1px solid #684344; border-radius: 0; }
+#apocalypse-au .au-editor { margin: 0 0 18px; padding: 14px; border: 1px solid #79514f; border-radius: 12px; background: #19171c; }
+#apocalypse-au .au-textarea { display: block; width: 100%; max-width: 100%; min-height: 110px; resize: vertical; border: 1px solid #65515a; border-radius: 10px; background: #151419; color: #eee4df; padding: 12px; font: inherit; font-size: 13px; line-height: 1.65; text-align: left; white-space: pre-wrap; overflow-wrap: anywhere; box-shadow: none; }
+#apocalypse-au .au-textarea:focus-visible { outline: 2px solid #dfa29a; outline-offset: 2px; }
+#apocalypse-au .au-editor-hint { color: var(--au-muted); font-size: 11px; padding: 8px 0; }
+#apocalypse-au button:disabled { opacity: .45; cursor: default; }
+#apocalypse-au .au-section-heading > label { font-size: 14px; font-weight: 650; color: #eee4df; }
+#apocalypse-au .au-library-toggle { display: block; min-height: 44px; padding: 0; border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; text-align: left; }
+#apocalypse-au .au-library-section > .au-section-heading { margin-bottom: 0; }
+#apocalypse-au .au-fold { border-top: 1px solid var(--au-line); padding-bottom: 12px; }
+#apocalypse-au .au-fold > summary { color: #eee4df; font-size: 14px; font-weight: 650; padding: 16px 0; }
+#apocalypse-au .au-library-label { display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: var(--au-muted); margin: 10px 0; }
+#apocalypse-au .au-library-select, #apocalypse-au .au-library-name { width: 100%; max-width: 100%; min-height: 44px; border: 1px solid #65515a; border-radius: 9px; padding: 8px 10px; color: #eee4df; background: #201c24; font: inherit; box-shadow: none; }
+#apocalypse-au .au-library-select option { background: #201c24; color: #eee4df; }
+#apocalypse-au .au-library-actions { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 12px; }
+#apocalypse-au .au-library-actions button { font-size: 12px; flex: 1 1 auto; }
+#apocalypse-au .au-library-preview { margin-top: 8px; }
+#apocalypse-au .au-world-save { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 6px; padding-bottom: 10px; }
+#apocalypse-au .au-world-save input { min-width: 0; min-height: 38px; padding: 6px 9px; font-size: 12px; }
+#apocalypse-au .au-world-save button { font-size: 11px; min-height: 38px; padding: 6px 9px; border-radius: 8px; white-space: nowrap; }
+#apocalypse-au .au-world-description { font-size: 11px; color: var(--au-muted); padding-top: 6px; overflow-wrap: anywhere; }
+#apocalypse-au .au-world-toolbar { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 5px; margin-top: 10px; }
+#apocalypse-au .au-world-toolbar .au-choice { min-width: 0; font-size: 11px; padding: 8px 2px; white-space: nowrap; }
+#apocalypse-au .au-world-toolbar .au-world-more-button { font-size: 23px; padding: 0; }
+#apocalypse-au .au-world-list { margin: 0; padding: 0; list-style: none; }
+#apocalypse-au .au-world-list > li { display: grid; grid-template-columns: minmax(0,1fr) auto auto; gap: 8px; align-items: center; padding: 12px 0; border-top: 1px solid var(--au-line); }
+#apocalypse-au .au-world-info { display: flex; flex-direction: column; min-width: 0; gap: 3px; }
+#apocalypse-au .au-world-info strong { overflow-wrap: anywhere; font-size: 13px; }
+#apocalypse-au .au-world-info > span { color: var(--au-muted); font-size: 11px; }
+#apocalypse-au .au-world-list .au-choice { font-size: 12px; padding: 8px 10px; }
+#apocalypse-au .au-world-more > summary { display: grid; place-items: center; padding: 0; width: 44px; height: 44px; border-radius: 9px; border: 1px solid var(--au-line); font-size: 24px; list-style: none; }
+#apocalypse-au .au-world-more > summary::-webkit-details-marker { display: none; }
+#apocalypse-au .au-world-more[open] { grid-column: 1 / -1; }
+#apocalypse-au .au-world-more[open] > summary { margin-left: auto; }
+#apocalypse-au .au-world-options { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 6px; padding: 8px; border: 1px solid var(--au-line); border-radius: 9px; margin-top: 7px; background: #18171c; }
+#apocalypse-au .au-world-options > button { min-width: 0; min-height: 38px; font-size: 11px; padding: 6px 4px; border-radius: 7px; white-space: nowrap; }
+#apocalypse-au .au-rename-row { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 6px; margin-top: 8px; }
+#apocalypse-au .au-rename-row input { min-width: 0; min-height: 38px; padding: 6px 9px; font-size: 12px; }
+#apocalypse-au .au-rename-row button { min-height: 38px; padding: 6px 10px; font-size: 11px; }
+#apocalypse-au .au-post-row { border-top: 1px solid var(--au-line); }
+#apocalypse-au .au-notice { color: #f1bf91; background: #3b2c27; border-radius: 8px; padding: 10px; margin-bottom: 12px; }
+#apocalypse-au .au-preview { border-top: 1px solid var(--au-line); }
+#apocalypse-au summary { cursor: pointer; padding: 14px 0; color: var(--au-muted); font-size: 12px; }
+#apocalypse-au pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 280px; overflow-y: auto; font-size: 11px; color: #d2c7c7; background: #151419; border-radius: 8px; padding: 12px; user-select: text; }
+#apocalypse-au .au-footer { display: flex; justify-content: center; gap: 7px; padding-top: 14px; border-top: 1px solid var(--au-line); color: var(--au-muted); font-size: 11px; }
+#apocalypse-au-menu .au-menu-badge { margin-left: auto; padding: 1px 7px; font-size: 10px; font-weight: 700; border-radius: 12px; border: 1px solid #776e78; color: #bcb4bf; }
+#apocalypse-au-menu[data-enabled="true"] .au-menu-badge { color: #f4b9a9; border-color: #ba8171; background: #503432; }
+#apocalypse-au-menu[data-enabled="true"] .fa-radiation { color: #e5a08e; }
+@media (max-width: 480px) {
+    #apocalypse-au { padding: 16px; border-radius: 12px; }
+    #apocalypse-au h2 { font-size: 21px; }
+    #apocalypse-au .au-edition { display: none; }
+    #apocalypse-au .au-power-row, #apocalypse-au .au-post-row { gap: 10px; }
+    #apocalypse-au .au-switch { gap: 5px; }
+    #apocalypse-au .au-subtypes .au-choice { flex: 1 1 auto; }
+}
+@media (prefers-reduced-motion: reduce) { #apocalypse-au * { transition: none !important; } }

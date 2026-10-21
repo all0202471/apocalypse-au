@@ -1,0 +1,12 @@
+{
+  "display_name": "멸망 확장팩",
+  "loading_order": 100,
+  "requires": [],
+  "optional": [],
+  "js": "index.js",
+  "css": "style.css",
+  "author": "all0202471",
+  "version": "1.0.0",
+  "minimum_client_version": "1.19.0",
+  "homePage": "https://github.com/all0202471/apocalypse-au"
+}
